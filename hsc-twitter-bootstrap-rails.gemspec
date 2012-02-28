@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "hsctwitter/bootstrap/rails/version"
+require "hsc-twitter-bootstrap/rails/version"
 
 Gem::Specification.new do |s|
   s.name = "hsc-twitter-bootstrap-rails"
-  s.version = HSCTwitter::Bootstrap::Rails::VERSION::STRING
+  s.version = HSCTwitterBootstrap::Rails::VERSION::STRING
   s.platform = Gem::Platform::RUBY
   s.authors = ["Thomas Volkmar Worm"]
   s.email = ["tvw@s4r.de"]
