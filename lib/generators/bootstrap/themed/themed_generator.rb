@@ -4,7 +4,14 @@ require 'rails/generators/generated_attribute'
 module Bootstrap
   module Generators
     class ThemedGenerator < ::Rails::Generators::Base
-      source_root File.expand_path('../templates', __FILE__)
+
+      user_source_root = Rails.root.join("lib", "generators", "bootstrap", "themed", "templates")
+      if File.exists?(user_source_root)
+        source_root user_source_root
+      else
+        source_root File.expand_path('../templates', __FILE__)
+      end
+
       argument :controller_path,    :type => :string
       argument :model_name,         :type => :string, :required => false
       argument :layout,             :type => :string, :default => "application",
@@ -72,11 +79,11 @@ module Bootstrap
 
       def generate_views
         views = {
-          "index.html.#{ext}"   => File.join('app/views', @controller_file_path, "index.html.#{ext}"),
-          "new.html.#{ext}"     => File.join('app/views', @controller_file_path, "new.html.#{ext}"),
-          "edit.html.#{ext}"    => File.join('app/views', @controller_file_path, "edit.html.#{ext}"),
-          "_form.html.#{ext}"   => File.join('app/views', @controller_file_path, "_form.html.#{ext}"),
-          "show.html.#{ext}"    => File.join('app/views', @controller_file_path, "show.html.#{ext}")}
+          "index.html.haml"   => File.join('app/views', @controller_file_path, "index.html.haml"),
+          "new.html.haml"     => File.join('app/views', @controller_file_path, "new.html.haml"),
+          "edit.html.haml"    => File.join('app/views', @controller_file_path, "edit.html.haml"),
+          "_form.html.haml"   => File.join('app/views', @controller_file_path, "_form.html.haml"),
+          "show.html.haml"    => File.join('app/views', @controller_file_path, "show.html.haml")}
         selected_views = views
         options.engine == generate_erb(selected_views)
       end
@@ -85,10 +92,6 @@ module Bootstrap
         views.each do |template_name, output_path|
           template template_name, output_path
         end
-      end
-
-      def ext
-        ::Rails.application.config.generators.options[:rails][:template_engine] || :erb
       end
 
     end
