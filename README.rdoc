@@ -33,7 +33,7 @@ Select the your preferred sass-style in config/application.rb:
 
 or 
 
-  config.sass.preferred_syntax = :sass
+  config.sass.preferred_syntax = :scss
 
 where the last one is the default.
 
@@ -50,8 +50,8 @@ Add an initializer "config/initializers/haml.rb":
 
 Remove the following files:
 
-   *app/assets/javascripts/application.js
-   *app/assets/stylesheets/application.css
+   app/assets/javascripts/application.js
+   app/assets/stylesheets/application.css
 
 Install application.js.coffee and application.css.sass (or .scss):
 
@@ -88,6 +88,14 @@ Example:
   rails g scaffold post title:string description:text
   rake db:migrate
   rails g bootstrap:themed posts
+
+
+If you want to modify the themed templates, you can install
+them into you local app directory:
+
+  rails g bootstrap:templates
+
+You will find them in 'lib/generators/bootstrap/themed/templates'.
 
 
 == Credits
