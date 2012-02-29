@@ -6,7 +6,7 @@ to kickstart the graphical part of webapps.
 hsc-twitter-bootstrap-rails integrates the toolkit with 
 {Ruby on Rails}[http://rubyonrails.org/]
 {Haml}[http://haml-lang.com/], {Sass}[http://sass-lang.com/] and
-{Coffeescript}[http://coffeescript.org/].
+{Coffeescript}[http://coffeescript.org/] and adds some generators.
 
 {<img src="https://secure.travis-ci.org/tvw/hsc-twitter-bootstrap-rails.png?branch=master" alt="Build Status" />}[http://travis-ci.org/tvw/hsc-twitter-bootstrap-rails]
 
@@ -109,6 +109,7 @@ hsc-twitter-bootstrap-rails depends on the sass-twitter-bootstrap-rails gem.
 == Author
 
 Thomas Volkmar Worm <mailto:tvw@s4r.de>
+
 
 == License
 
