@@ -1,1 +1,1 @@
-https://secure.travis-ci.org/tvw/hsc-twitter-bootstrap-rails.png[http://travis-ci.org/tvw/hsc-twitter-bootstrap-rails]
+https://secure.travis-ci.org/tvw/hsc-twitter-bootstrap-rails.png
