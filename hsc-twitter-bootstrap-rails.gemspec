@@ -20,6 +20,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'railties', '>= 3.1'
   s.add_dependency 'actionpack', '>= 3.1'
-  s.add_runtime_dependency 'sass-twitter-bootstrap-rails', '~> 1.0'
-  s.add_development_dependency 'rails', '>= 3.1'
+  s.add_dependency 'haml-rails', '>= 0.3.4'
+  s.add_dependency 'sass-twitter-bootstrap-rails', '>= 1.0'
 end
