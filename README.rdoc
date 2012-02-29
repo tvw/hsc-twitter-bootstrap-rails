@@ -1,1 +1,122 @@
+= Twitter Bootstrap for Rails 3.1 Asset Pipeline using Haml/Sass/Coffeescript
+
+{Twitter Bootstrap}[http://twitter.github.com/bootstrap/] is a design toolkit
+to kickstart the graphical part of webapps.
+
+hsc-twitter-bootstrap-rails integrates the toolkit with 
+{Ruby on Rails}[http://rubyonrails.org/]
+{Haml}[http://haml-lang.com/], {Sass}[http://sass-lang.com/] and
+{Coffeescript}[http://coffeescript.org/].
+
 {<img src="https://secure.travis-ci.org/tvw/hsc-twitter-bootstrap-rails.png?branch=master" alt="Build Status" />}[http://travis-ci.org/tvw/hsc-twitter-bootstrap-rails]
+
+
+== Usage in your Ruby on Rails app
+
+
+=== Installing Gem
+
+Include Bootstrap in Gemfile:
+
+  gem "hsc-twitter-bootstrap-rails"
+
+Bundle it:
+
+  bundle install
+
+
+=== Select your preferred Sass style
+
+Select the your preferred sass-style in config/application.rb:
+
+  config.sass.preferred_syntax = :sass
+
+or 
+
+  config.sass.preferred_syntax = :sass
+
+where the last one is the default.
+
+
+=== Config Haml
+
+Add an initializer "config/initializers/haml.rb":
+
+  Haml::Template.options[:format] = :html5
+  Haml::Template.options[:attr_wrapper] = '"'
+
+
+=== Install the assets
+
+Remove the following files:
+
+   *app/assets/javascripts/application.js
+   *app/assets/stylesheets/application.css
+
+Install application.js.coffee and application.css.sass (or .scss):
+
+  rails g bootstrap:install
+
+
+== The Generators
+
+=== Layout
+
+To create a new haml layout:
+
+  rails g bootstrap:layout [LAYOUT_NAME] [*ﬁxed or ﬂuid]
+
+'LAYOUT_NAME' is the name of the layout. 'fixed' and 'fluid' is the style of
+the layout.
+
+Example:
+
+  rails g bootstrap:layout application fixed
+
+Make sure, that you do not have erb-versions of your layouts like
+'app/views/layouts/application.html.erb' since they will be preferred by
+rails.
+
+=== Themed
+
+Themed generates Twitter Bootstrap compatible scaffold views:
+
+  rails g bootstrap:themed [RESOURCE_NAME]
+
+Example:
+
+  rails g scaffold post title:string description:text
+  rake db:migrate
+  rails g bootstrap:themed posts
+
+
+== Credits
+
+The main part of bringing Twitter Bootstrap to Sass is done by Christopher
+Cocchi-Perrier: {sass-twitter-bootstrap-rails}[https://github.com/ccocchi/sass-twitter-bootstrap-rails]
+
+hsc-twitter-bootstrap-rails depends on the sass-twitter-bootstrap-rails gem.
+
+
+== Author
+
+Thomas Volkmar Worm <tvw@s4r.de>
+
+== License
+
+Copyright (c) 2012 Thomas Volkmar Worm
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions: The above copyright
+notice and this permission notice shall be included in all copies or
+substantial portions of the Software. THE SOFTWARE IS PROVIDED "AS IS",
+WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE
+FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR
+THE USE OR OTHER DEALINGS IN THE SOFTWARE.
