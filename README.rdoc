@@ -112,7 +112,7 @@ Thomas Volkmar Worm <mailto:tvw@s4r.de>
 
 == License
 
-Copyright (c) 2012 Thomas Volkmar Worm
+Copyright (c) 2012 Thomas Volkmar Worm <mailto:tvw@s4r.de>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
