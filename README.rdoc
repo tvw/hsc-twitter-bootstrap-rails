@@ -108,7 +108,7 @@ hsc-twitter-bootstrap-rails depends on the sass-twitter-bootstrap-rails gem.
 
 == Author
 
-Thomas Volkmar Worm <tvw@s4r.de>
+Thomas Volkmar Worm <mailto:tvw@s4r.de>
 
 == License
 
