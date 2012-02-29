@@ -1,1 +1,1 @@
-https://secure.travis-ci.org/tvw/hsc-twitter-bootstrap-rails.png
+{<img src="https://secure.travis-ci.org/tvw/hsc-twitter-bootstrap-rails.png?branch=master" alt="Build Status" />}[http://travis-ci.org/tvw/hsc-twitter-bootstrap-rails]
